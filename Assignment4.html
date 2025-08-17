@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment Operator</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <button onclick="calculate()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers!";
+                return;
+            }
+            
+            let sum = num1 + num2;
+            let diff = num1 - num2;
+            let prod = num1 * num2;
+            let div = num2 !== 0 ? (num1 / num2) : "Cannot divide by zero";
+            
+            document.getElementById("result").innerHTML = `
+                Addition: ${sum} <br>
+                Subtraction: ${diff} <br>
+                Multiplication: ${prod} <br>
+                Division: ${div}
+            `;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Complex Logical and Comparison Operator</title>
+</head>
+<body>
+  <h2>Complex Logical and Comparison Operator</h2>
+
+  <label>Enter Age: </label>
+  <input type="number" id="age"><br><br>
+
+  <label>Are you a citizen (true/false)? </label>
+  <input type="text" id="citizenship"><br><br>
+
+  <button onclick="checkEligibility()">Check Eligibility</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkEligibility() {
+      let age = parseInt(document.getElementById("age").value);
+      let citizenship = document.getElementById("citizenship").value.toLowerCase() === "true";
+
+      let eligible = (age >= 18) && (!(!citizenship));
+
+      document.getElementById("result").innerText = "Eligible to vote: " + eligible;
+    }
+  </script>
+</body>
+</html>

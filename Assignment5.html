@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operator Precedence</title>
+</head>
+<body>
+
+<h2>Operator Precedence</h2>
+
+<label>Enter your name: </label>
+<input type="text" id="nameInput" placeholder="Type your name here">
+<br>
+<button onclick="showMessage()">Submit</button>
+
+<p id="output"></p>
+
+<script>
+function showMessage() {
+    let name = document.getElementById("nameInput").value;
+    if(name.trim() === "") {
+        document.getElementById("output").style.color = "red";
+        document.getElementById("output").innerText = "Please enter a valid name.";
+    } else {
+        document.getElementById("output").style.color = "green";
+        document.getElementById("output").innerText = "Hello, " + name + "! Welcome to JavaScript.";
+    }
+}
+</script>
+
+</body>
+</html>

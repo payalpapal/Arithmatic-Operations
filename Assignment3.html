@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logical Operator</title>
+</head>
+<body>
+  <h2>Scholarship Eligibility Checker</h2>
+
+  <label>Enter Math score:</label>
+  <input type="number" id="mathScore"><br><br>
+
+  <label>Enter Science score:</label>
+  <input type="number" id="scienceScore"><br><br>
+
+  <button onclick="checkEligibility()">Check Eligibility</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function checkEligibility() {
+      let mathScore = parseFloat(document.getElementById("mathScore").value);
+      let scienceScore = parseFloat(document.getElementById("scienceScore").value);
+
+      let isEligible = (mathScore >= 90) && (scienceScore >= 85);
+
+      document.getElementById("result").innerText = "Scholarship Eligibility: " + isEligible;
+    }
+  </script>
+</body>
+</html>

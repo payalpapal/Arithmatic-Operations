@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Discount Calculator</title>
+</head>
+<body>
+    <h2>Shopping Discount Calculator</h2>
+
+    <label>Enter total amount: </label>
+    <input type="number" id="amount">
+    <button onclick="calculateDiscount()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateDiscount() {
+            let total = parseFloat(document.getElementById("amount").value);
+
+            
+            if (total > 100) {
+                total -= total * 0.10; 
+            }
+
+            document.getElementById("result").innerText = "Discounted total: " + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
